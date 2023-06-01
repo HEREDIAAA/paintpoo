@@ -9,6 +9,9 @@ ancho = 800
 alto = 600
 superficie = pygame.display.set_mode((ancho, alto))
 
+# Establecer el color de fondo predeterminado a negro (0, 0, 0)
+color_fondo = (0, 0, 0)
+
 # Establecer el color predeterminado a rojo (255, 0, 0)
 color = (255, 0, 0)
 
@@ -44,6 +47,13 @@ for linea in myfile:
             g = int(linea[2])
             b = int(linea[3])
             color = (r, g, b)
+    elif comando == "fondo":
+        if len(linea) >= 4:  # Verificar que la línea tenga suficientes elementos
+            r = int(linea[1])
+            g = int(linea[2])
+            b = int(linea[3])
+            color_fondo = (r, g, b)
+            superficie.fill(color_fondo)
     elif comando == "linea":
         direccion = linea[1]
         x = int(linea[2])
