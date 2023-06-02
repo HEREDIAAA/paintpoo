@@ -100,9 +100,9 @@ class Paint:
 
         pygame.display.flip()
 
-    def ejecutar_comandos(self, nombre_archivo):
+    def ejecutar_comandos(self, comandos):
         """Función para ejecutar los comandos desde un archivo"""
-        with open(nombre_archivo, "r", encoding="utf-8") as archivo:
+        with open(comandos, "r", encoding="utf-8") as archivo:
             for linea in archivo:
                 linea = linea.strip().split()
                 comando = linea[0]
@@ -169,16 +169,23 @@ class Paint:
                         self.dibujar_rectangulo(ejx, ejy, ancho, alto)
 
     def run(self):
-        """Bucle principal"""
+        """ciclo principal"""
         while True:
             for evento in pygame.event.get():
                 if evento.type == pygame.QUIT:
                     pygame.quit()
+
+def leer_archivo(helpp):
+    """para desplegar el help"""
+    with open(helpp, 'r', encoding="utf-8") as archivo:
+        contenido = archivo.read()
+        print(contenido)
 
 if __name__ == "__main__":
     ancho_pantalla = 800
     alto_pantalla = 600
 
     programa = Paint(ancho_pantalla, alto_pantalla)
-    programa.ejecutar_comandos("comandos.cmd.txt")
+    programa.ejecutar_comandos("comandos.txt")
+    leer_archivo("helpp.txt")
     programa.run()
