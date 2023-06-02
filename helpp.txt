@@ -1,7 +1,7 @@
 # Comandos para el programa Paint
 
 # Comando para salir del programa
-exit
+picar a la X superior derecha
 
 # Comando para cambiar el color de fondo
 # Uso: fondo R G B
