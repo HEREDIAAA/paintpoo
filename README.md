@@ -22,9 +22,11 @@ Ejecuta el programa con el siguiente comando:
 
 python paintfinal.py
 
+debes correr el programa y despues de correrlo se pondra en la terminal la lista de comandos los cuales puedes usar en comandos.txt
 El programa abrirá una ventana de visualización donde podrás dibujar utilizando comandos.
 
-Los comandos están definidos en el archivo "comandos.cmd.txt". Puedes editar ese archivo para personalizar los dibujos que se mostrarán en la ventana.
+
+Los comandos están definidos en el archivo "comandos.txt". Puedes editar ese archivo para personalizar los dibujos que se mostrarán en la ventana.
 
 Comandos
 
